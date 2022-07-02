@@ -3,21 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/23e7148693.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+    <!-- NAV SECTION -->
     <header>
         <nav>
             <div>
-                <h3>DEENAH</h3>
+                <h3>Deenah</h3>
             </div>
-            <ul>
+            <ul class="navlist">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contacts">Contact</a></li>
             </ul>
+            <button id="burger" class="hamburger">
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+                <span class="line-3"></span>
+            </button>
         </nav>
     </header>
+    <!-- HERO SECTION -->
+    <section id="hero">    
+    <h3 class="hi">Hi, my name is</h3>
+    <h1 class="profile-name">Adesola Modinat Adenike.</h1>
+    <h1 class="profile-role">I build front-end products.</h1>
+    <p>I'm a front-end developer, enthusiast about building scalable interfaces with great user experience </p>
+    <button class="download-cv"><a href="#">Download CV</a></button>
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+    <section Id="about">
+    <h3>About Me</h3>
+    <div class="about">
+    <div class="profile-info">
+    <p>Modinat is an enthusiatic front-end web developer, skilled in html, css, javascript and basics of ReactJs
+        She is a self-taught web devloper, who has undergone several training, and just concluded an internship role
+        with Paperwork Technologies.
+    </p>
+    <p>Modinat is currently a fellow at Tiidelab, to further broaden her techincal and proffessional skills</p>
+    <div class="icons">
+        <a href="https://github.com/Modinat1"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/modinat-adesola-96356796"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/Nykkhy442?t=MngmL0MaVCecpecbDxOoSw&s=09"><i class="fa-brands fa-twitter"></i></a>
+        <a href="mailto:adenikem@yahoo.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+    </div>
+    <div class="img-container">
+        <div class="empty-div"></div>
+    <img class="profile-img" src="Images/Adesola-Modinat photo.jpg" alt="profile-picture">
+    </div>  
+</div> 
+</section>
+
+    <!-- Works -->
+    <section id="work">
+        <h3>Work</h3>
+        <div class="work-container">
+            <div class="work">
+                <img src="images/project 1.png" alt="project-image">
+                <button type="button"><a href="https://paperworktechnologies.netlify.app/">visit</a></button>
+            </div>
+            <div class="work">
+                <img src="images/project 2.png" alt="project-image">
+                <button type="button"><a href="https://myyweatherapp.netlify.app/">visit</a></button>
+            </div>
+            <div class="work">
+                <img src="images/project 3.png" alt="project-image">
+                <button type="button"><a href="#">visit</a></button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contacts -->
+    <section id="contacts">
+        <h3>Send me a message</h3>
+        <form action="#">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input id="fullName" name="fullName" type="text" placeholder="fullName">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="email">
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Numner</label>
+                <input id="phoneNumber" name="phoneNumber" type="text" placeholder="phoneNumber">
+            </div>
+            <div class="form-group">
+                <label for="Message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="message"></textarea>
+            </div>
+            <div class="icons">
+                <a href="https://github.com/Modinat1"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/modinat-adesola-96356796"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/Nykkhy442?t=MngmL0MaVCecpecbDxOoSw&s=09"><i class="fa-brands fa-twitter"></i></a>
+                <a href="mailto:adenikem@yahoo.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </form>
+    </section>
+
+</div>
+<script src="index.js"></script>
 </body>
 </html>
