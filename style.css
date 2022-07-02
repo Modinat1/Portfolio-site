@@ -236,6 +236,7 @@ nav ul li{
 }
 /* Hero */
 #hero{
+    margin-top: 2.5rem;
     text-align: center;
 }
 .about{
