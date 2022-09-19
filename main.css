@@ -1,5 +1,10 @@
 :root {
     box-sizing: border-box;
+    --backgroungColor: rgb(10, 25, 47);
+    --primary-green-color: rgb(133, 185, 133);
+    --textColor: rgb(163, 152, 152);
+    --projectInfoBg: #112240;
+    --links-color: rgb(163, 152, 152);
 }
 *,
 ::before,
@@ -10,24 +15,25 @@
 }
 
 body {
-    background-color: rgb(10, 25, 47);
-    color: rgb(163, 152, 152);
+    background-color: var(--backgroungColor);
+    color: var(--textColor);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 /* Global styling */
+.keyWords{
+    color: var(--primary-green-color);
+}
 .container {
     max-width: 80%;
     margin: 1.5rem auto;
 }
 #about,
-#contacts,
-#work {
-    margin-top: 2rem;
+#contacts{
+margin: 3rem;
 }
 #about h3,
-#work h3,
+#projects h3,
 #contacts h3 {
-    /* margin-top: 2rem; */
     text-align: center;
 }
 .icons {
@@ -38,18 +44,19 @@ body {
 }
 
 .icons a {
-    color: rgb(163, 152, 152);
+    color: var(--links-color);
     cursor: pointer;
     text-decoration: none;
     transition: opacity 0.5s ease;
 }
 
 .icons a:hover {
-    color: rgb(133, 185, 133);
+    color: var(--primary-green-color);
     opacity: 0.5;
 }
 .show {
     display: block;
+    /* transform: translateX(0); */
 }
 /* Navbar styling */
 nav {
@@ -58,6 +65,8 @@ nav {
 }
 nav ul {
     display: none;
+    /* transform: translateX(120%); */
+    /* transition: all 0.5s ease; */
     background-color: #f3eee8;
     position: fixed;
     top: 80px;
@@ -70,14 +79,14 @@ nav ul li {
     margin-bottom: 1rem;
 }
 nav ul a {
-    color: rgb(163, 152, 152);
+    color: var(--links-color);
     text-decoration: none;
     padding: 1rem;
     transition: opacity 0.5s ease;
 }
 
 nav ul a:hover {
-    color: rgb(133, 185, 133);
+    color: var(--primary-green-color);
     opacity: 0.5;
 }
 /* Header styling */
@@ -90,7 +99,7 @@ nav ul a:hover {
 
 .hamburger span {
     display: block;
-    background-color: rgb(163, 152, 152);
+    background-color: var(--links-color);
     width: 20px;
     height: 3px;
     margin-bottom: 3px;
@@ -102,16 +111,16 @@ nav ul a:hover {
 }
 
 #hero .hi {
-    color: rgb(133, 185, 133);
+    color: var(--primary-green-color);
     letter-spacing: 0.15rem;
 }
 
 #hero .profile-name {
-    color: rgb(218, 210, 210);
+    /* color: rgb(218, 210, 210); */
+    color: var(--links-color);
     font-size: 3.5rem;
     margin-top: 1rem;
 }
-
 #hero .profile-role {
     color: #a39898;
     font-size: 2rem;
@@ -123,7 +132,7 @@ nav ul a:hover {
 
 #hero button {
     background-color: transparent;
-    border: 2px solid rgb(133, 185, 133);
+    border: 2px solid var(--primary-green-color);
     margin-top: 2rem;
     padding: 1rem 3rem;
     transition: opacity 0.5s ease;
@@ -134,7 +143,7 @@ nav ul a:hover {
 }
 
 #hero button a {
-    color: rgb(163, 152, 152);
+    color: var(--links-color);
     font-size: 1.1rem;
     cursor: pointer;
     text-decoration: none;
@@ -146,153 +155,118 @@ nav ul a:hover {
 }
 .about .profile-info {
     line-height: 1.5;
+    margin-right: 0;
 }
 .about .profile-info p {
     margin: 2rem 0;
 }
-.img-container {
+#about .img-container {
+    margin: auto; 
     position: relative;
+    z-index: 2;
 }
-
-.empty-div {
-    position: absolute;
-    border-radius: 20px;
-    border: 10px solid rgb(133, 185, 133);
-    width: 300px;
-    height: 300px;
-}
-
-.img-container .profile-img {
-    border-radius: 20px;
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 3rem;
-    left: 3.5rem;
-}
-.meet-up-container {
-    margin: 28rem auto 0;
-}
-.meet-up-container h3{
-    margin-bottom: 1rem;
-}
-.meet-up-photo {
-    margin: 0 auto 1.5rem;
-    max-width: 350px;
-    /* height: 400px; */
-}
-
-.meet-up-photo img {
-    /* object-fit: contain; */
+#about img{
     width: 100%;
-    /* height: 100%; */
-    transition: all 0.5s ease;
+}
+#about .img-container::after{
+    content: '';
+    background-color: transparent;
+    border: 2.5px solid var(--primary-green-color);
+    width: 200px;
+    height: 320px;
+    display: block;
+    position: absolute;
+    bottom: -1rem;
+    right: -1rem;
+    z-index: -1;
 }
 
-.meet-up-photo img:hover {
-    transform: translateY(-5px);
-}
 /* WORK STYLING */
-#work h3{
+#projects h3{
     margin-bottom: 2rem;
 }
-.work {
-    max-width: 400px;
+.project {
+    margin: 3rem 0;
 }
-
-.work img {
-    display: block;
-    width: 100%;
-    margin: auto;
-    transition: all 0.5s ease;
-}
-
-.work img:hover {
-    transform: translateY(-5px);
-}
-
-.work button {
-    background-color: transparent;
-    border: 2px solid rgb(133, 185, 133);
-    display: block;
-    margin: 2rem auto;
-    padding: 0.5rem 3rem;
-    transition: opacity 0.5s ease;
-}
-
-.work button:hover {
-    opacity: 0.5;
-}
-
-.work button a {
-    color: rgb(163, 152, 152);
-    font-size: 1.1rem;
-    cursor: pointer;
-    text-decoration: none;
-}
-/* Contacts */
-#contacts h3{
-    margin-bottom: 2rem;
-}
-form {
-    border: 1px solid rgb(133, 185, 133);
-    padding: 1rem 2rem;
-    max-width: 400px;
-    margin: auto;
-}
-
-form label {
-    display: block;
+.project-info{
+    background-color: var(--projectInfoBg);
     margin: 1rem 0;
-}
-
-form input,
-textarea {
-    background-color: transparent;
-    border: 2px solid rgb(133, 185, 133);
-    width: 100%;
     padding: 1rem;
-}
-
-form input,
-textarea:focus {
-    outline: none;
-}
-
-form input,
-textarea::placeholder {
-    font-size: 1.1rem;
-}
-
-footer {
-    font-weight: bolder;
-    margin-top: 2rem;
     text-align: center;
 }
+.project img {
+    display: block;
+    width: 100%;
+    margin: auto;
+    transition: all 0.5s ease;
+}
+
+.project img:hover {
+    transform: translateY(-5px);
+}
+.project-info h4 {
+    margin: 1rem;
+}
+
+.tech-used {
+    color: var(--primary-green-color);
+    margin-top: 1rem;
+}
+
+.tech-used span {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+/* get in touch */
+.get-in-touch{
+    text-align: center;
+}
+.get-in-touch h2{
+    margin: 1rem;
+}
+.get-in-touch button{
+    background-color: transparent;
+    border: 1px solid var(--primary-green-color);
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+}
+.get-in-touch button a{
+    color: var(--textColor);
+    text-decoration: none;
+}
+footer{
+    margin-top: 5rem;
+    text-align: center;
+}
+
 /* Tab media queries */
 @media(min-width: 600px){
-    .meet-up {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 1rem;
-        }
-                 .work-container {
-                     display: grid;
-                     grid-template-columns: repeat(2, 1fr);
-                     grid-gap: 1rem;
-                 }
-        /* Contacts */
-        form {
-            padding: 1rem 2rem;
-            max-width: 500px;
-            margin: auto;
-        }
+.work-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+/* About tab screen */
+#about .img-container{
+width: 300px;
+}
+#about .img-container::after{
+    width: 300px;
+    height: 400px;
+}
+/* Contacts */
+form {
+    padding: 1rem 2rem;
+    max-width: 500px;
+    margin: auto;
+    }
 }
 @media (min-width: 764px){
     #about,
     #contacts,
-    #work {
-        margin-top: 7rem;
+    #projects {
+        margin-top: 10rem;
     }
     .hamburger{
         display: none;
@@ -308,14 +282,19 @@ footer {
     nav ul a{
         margin-right: 1rem;
     } 
-    /* Hero mobile styling */
+    /* Hero large screen styling */
     #hero {
         margin-top: 3rem;
         text-align: left;
     }
-     /* ABOUT STYLING mobile */
+    #hero button{
+        margin-top: 5rem;
+    }
+     /* ABOUT large screen STYLING */
     .about {
         display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
     }
     .about .profile-info{
@@ -326,27 +305,47 @@ footer {
     .img-container{
         flex: 1;
     }
-    .meet-up-container {
-        margin-top: 8rem;
-    }
-        .meet-up-container h3{
-            margin-bottom: 1.5rem;
+        #about .img-container::after {
+            content: '';
+            background-color: transparent;
+            border: 2.5px solid rgb(133, 185, 133);
+            width: 300px;
+            height: 400px;
+            display: block;
+            position: absolute;
+            bottom: -1rem;
+            right: -1rem;
+            z-index: -1;
         }
-    .meet-up {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
+    /* Project for large screen */
+    .project{
+        display: flex;
+        position: relative;
+        margin: 5rem;
     }
-        /* work styling */
-    .work-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
+    .project-screenshot{
+        width: 65%;
     }
+    .project-screenshot img{
+        width: 100%;
+    }
+    .project-info{
+        position: absolute;
+        width: 40%;
+        text-align: right;
+        padding: 1.5rem;
+        right: 2rem;
+        top: 1.5rem;
+    }
+
+    /* .project-odd{
+
+    } */
+
         /* Contacts */
-        form {
-            padding: 1rem 2rem;
-            max-width: 700px;
-            margin: auto;
-        }
+    form {
+        padding: 1rem 2rem;
+        max-width: 700px;
+        margin: auto;
+    }
 }
