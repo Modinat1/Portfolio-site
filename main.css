@@ -2,7 +2,7 @@
     box-sizing: border-box;
     --backgroungColor: rgb(10, 25, 47);
     --primary-green-color: rgb(133, 185, 133);
-    --textColor: rgb(163, 152, 152);
+    --textColor: rgb(228, 214, 214);
     --projectInfoBg: #112240;
     --links-color: rgb(163, 152, 152);
 }
@@ -44,7 +44,8 @@ margin: 3rem;
 }
 
 .icons a {
-    color: var(--links-color);
+    /* color: var(--links-color); */
+    color: var(--textColor);
     cursor: pointer;
     text-decoration: none;
     transition: opacity 0.5s ease;
@@ -80,6 +81,7 @@ nav ul li {
 }
 nav ul a {
     color: var(--links-color);
+    /* color: var(--textColor); */
     text-decoration: none;
     padding: 1rem;
     transition: opacity 0.5s ease;
@@ -99,7 +101,8 @@ nav ul a:hover {
 
 .hamburger span {
     display: block;
-    background-color: var(--links-color);
+    /* background-color: var(--links-color); */
+    background-color: var(--textColor);
     width: 20px;
     height: 3px;
     margin-bottom: 3px;
@@ -117,7 +120,8 @@ nav ul a:hover {
 
 #hero .profile-name {
     /* color: rgb(218, 210, 210); */
-    color: var(--links-color);
+    /* color: var(--links-color); */
+    color: var(--textColor);
     font-size: 3.5rem;
     margin-top: 1rem;
 }
@@ -143,7 +147,8 @@ nav ul a:hover {
 }
 
 #hero button a {
-    color: var(--links-color);
+    /* color: var(--links-color); */
+    color: var(--textColor);
     font-size: 1.1rem;
     cursor: pointer;
     text-decoration: none;
@@ -161,7 +166,7 @@ nav ul a:hover {
     margin: 2rem 0;
 }
 #about .img-container {
-    margin: auto; 
+    margin: 1.5rem auto; 
     position: relative;
     z-index: 2;
 }
@@ -173,7 +178,7 @@ nav ul a:hover {
     background-color: transparent;
     border: 2.5px solid var(--primary-green-color);
     width: 200px;
-    height: 320px;
+    height: 300px;
     display: block;
     position: absolute;
     bottom: -1rem;
